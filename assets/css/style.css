@@ -108,6 +108,9 @@ footer{
     align-items: center;
     font-weight: 500;
 }
+.raza:active{
+    width: 250px;
+}
 
 .pie{
     /* display: flex;
@@ -130,12 +133,18 @@ footer{
     box-shadow: 1px 1px 5px rgb(182, 35, 157);
 }
 
+.mascota:hover{
+    width: 250px;
+}
+
 .mascota img{
     width: 100%;
 }
 
 button{
     padding: 10px;
+    background-color: gainsboro;
+    border: gainsboro;;
 }
 
 .paginado{
@@ -157,13 +166,18 @@ button{
             'navbar aside'
             'navbar section'
             'footer section';
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: 1fr 5fr;
     }
 
     section{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr repeat(1,2fr);
+        padding-left: 30px;
     }
+
+    .seccion__mascota{}
 
     .paginado{
         justify-content: center;
@@ -174,9 +188,10 @@ button{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        width: 228px;
     }
 
-    .menu{
+    .barras{
         display: none;
     }
 
@@ -195,4 +210,39 @@ button{
     .contacto{
         display: inherit;
     }
+
+    .encabezado{
+        padding-bottom: 20px;
+    }
+    .paginado{
+        text-align: center;
+    }
+
+    .rara{
+        display: flex;
+        justify-content: center;
+    }
+
+    .menus{
+        padding-top: 50px;
+    }
+
+    .raza{
+        width: 931px;
+        justify-content: space-between;
+        padding: 24px
+    }
+    
+    .raza:active{
+        width: 940px;
+    }
+
+    .footer{
+        width: 253px;
+    }
+
+    .mascota{
+        width: 300px;
+    }
 }
+
