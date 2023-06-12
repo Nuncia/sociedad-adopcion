@@ -1,10 +1,8 @@
-
 body{
     font-family: 'Quicksand', sans-serif;
 }
 
 .grid__container{
-    height: 100vh;
     display: grid;
     grid-template-areas: 
         'navbar'
@@ -13,90 +11,24 @@ body{
         'footer';
 }
 
-nav{
+.navbar{
     grid-area: navbar;
     display: flex;
+    background-color: rgb(216, 23, 174);
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     padding: 7px 10px 7px 15px;
-    background-color: rgb(216, 23, 174);
-    /* position: fixed;
-    top: 0;
-    width: 95%; */
 }
 
-.aside{
+aside{
     grid-area: aside;
     text-align: center;
-    height: 118px;
+    height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: gainsboro;
-}
-
-section{
-    grid-area: section;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    gap: 30px;
-}
-
-footer{
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding-top: 10px;
-    background-color: rgb(216, 23, 174);
-    color: white;
-}
-
-.titulo{
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding-left: 9px;
-}
-
-.icono__1{
-    padding-right: 15px;
-}
-
-.icono__2{
-    display: flex;
-    justify-content: flex-end;
-    align-items:flex-end;
-    font-size: medium;
-    color: rgb(8, 8, 75);
-}
-
-.encabezado{
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-}
-
-.inicio{
-    display: none;
-}
-
-.adopciones{
- display: none;
-}
-
-.nosotros{
-    display: none;
-}
-
-.contacto{
-    display: none;
 }
 
 .raza{
@@ -112,19 +44,63 @@ footer{
     width: 250px;
 }
 
-.pie{
-    /* display: flex;
+section{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+.section__mascotas{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(216, 23, 174);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .redes__sociales{
+    padding-top: 10px;
+}
+
+.encabezado{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.titulo{
+    padding-left: 10px;
+}
+
+.inicio{
+    display: none;
+}
+
+.adopciones{
+    display: none;
+}
+
+.nosotros{
+    display: none;
+}
+
+.contacto{
+    display: none;
 }
 
 .mascota{
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,17 +110,11 @@ footer{
 }
 
 .mascota:hover{
-    width: 250px;
+    width: 350px;
 }
 
 .mascota img{
     width: 100%;
-}
-
-button{
-    padding: 10px;
-    background-color: gainsboro;
-    border: gainsboro;;
 }
 
 .paginado{
@@ -156,39 +126,38 @@ button{
     padding: 0px 10px 20px;
 }
 
-.face{
-    padding-right: 21px;
-}
-
-@media(min-width:576px){
+@media(min-width:  576px){
     .grid__container{
         grid-template-areas: 
             'navbar aside'
             'navbar section'
             'footer section';
-        grid-template-columns: 1fr 7fr;
-        grid-template-rows: 1fr 5fr;
+        height: 100vh;
+        grid-template-columns: 1fr 5fr;
+    }
+    
+    .section__mascotas{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
+        padding-left: 20px;
     }
 
-    section{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 1fr 1fr repeat(1,2fr);
-        padding-left: 30px;
+    .mascota:hover{
+        width: 400px;
     }
 
-    .seccion__mascota{}
-
-    .paginado{
-        justify-content: center;
-    }
-
-    .navbar{
+    .section__paginador{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        width: 228px;
+    }
+
+    .raza{
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
     }
 
     .barras{
@@ -196,53 +165,39 @@ button{
     }
 
     .inicio{
-        display:inherit;
+        display:initial;
+        margin: 0px;
+        padding-top: 40px;
     }
     
     .adopciones{
-     display: inherit;
+        display: initial;
+        margin-bottom: 0px ;
     }
     
     .nosotros{
-        display: inherit;
+        display: initial;
     }
     
     .contacto{
-        display: inherit;
-    }
-
-    .encabezado{
-        padding-bottom: 20px;
-    }
-    .paginado{
-        text-align: center;
-    }
-
-    .rara{
-        display: flex;
-        justify-content: center;
-    }
-
-    .menus{
-        padding-top: 50px;
-    }
-
-    .raza{
-        width: 931px;
-        justify-content: space-between;
-        padding: 24px
+        display: initial;
+        margin: 0px;
     }
     
-    .raza:active{
-        width: 940px;
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /* width: 300px; */
     }
 
     .footer{
-        width: 253px;
+        /* width: 300px; */
     }
 
-    .mascota{
-        width: 300px;
+    .menus{
+        display: flex;
+        flex-direction: column;
     }
 }
-
