@@ -28,7 +28,7 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: gainsboro;
+    background-color: #e1e2e1;
 }
 
 .raza{
@@ -39,6 +39,7 @@ aside{
     justify-content: space-around;
     align-items: center;
     font-weight: 500;
+    background-color: #e1e2e1;
 }
 .raza:active{
     width: 250px;
@@ -52,12 +53,15 @@ section{
     align-items: center;
     padding-top: 20px;
     gap: 30px;
+    overflow-y: scroll;
 }
 
 .section__mascotas{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    height: 65vh;
+    overflow-y: scroll;
 }
 
 footer{
